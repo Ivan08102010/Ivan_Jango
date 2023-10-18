@@ -2,10 +2,11 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 
+
 # Create your views here.
 from django.urls import reverse
 def index(request):
-    return HttpResponse('<img src= "https://sun6-23.userapi.com/s/v1/if1/ahxh8DGyDx_F9_G2I8az50uxGNxxI7l_KlxGBpUIIcSMsDlDrDLDg9dlhJ4szaze_N6Xk-rh.jpg?size=1794x1934&quality=96&crop=68,68,1794,1934&ava=1"</img ><h1></h1>Главная страница')
+    return render(request, 'women/index.html')
 
 def d(request):
     return HttpResponse('1234567890')
