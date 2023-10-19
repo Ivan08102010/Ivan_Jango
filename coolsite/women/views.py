@@ -6,22 +6,20 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from django.urls import reverse
 def index(request):
-    return render(request, 'women/index.html')
-
-def d(request):
-    return HttpResponse('1234567890')
+    return render(request,'women/index.html')
 
 def a(request):
-    return HttpResponse('AaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAa')
+    return render(request, 'women/a.html')
 
 def b(request):
-    return HttpResponse('BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb')
+    return render(request, 'women/b.html')
 
 def c(request):
-    return HttpResponse('CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc')
+    return render(request, 'women/c.html')
 
 
-
+def gim1(request):
+    return render(request, 'women/gim1.html')
 def gim1(request):
     return HttpResponse('<img src= "https://bryansktoday.ru/uploads/common/091b388af452bef4_XL.jpg"</img ><h1> Gimnazia1</h1><img src= "https://www.gimn-1.ru/about/nasha-gordost/13.jpg"</img ><h1>')
 

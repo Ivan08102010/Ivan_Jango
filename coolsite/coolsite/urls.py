@@ -18,7 +18,6 @@ from operator import index
 
 from django.contrib import admin
 from django.urls import path, include
-from women.views import d, gim1, a, b, c, categories
 
 urlpatterns = [
     path('admin/', admin.site.urls),
