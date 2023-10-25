@@ -58,3 +58,5 @@ def categories(request, cat_id):
     else:
         uri = reverse('home')
         return redirect(uri)
+def itcube(request):
+    return render(request, 'women/32.html')

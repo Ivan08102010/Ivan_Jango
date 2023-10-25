@@ -8,4 +8,5 @@ urlpatterns = [
     path('a/', a, name='1'),
     path('b/', b, name='2'),
     path('c/', c, name='3'),
-    path('cats/<int:cat_id>/', categories, name='Bio')]
+    path('cats/<int:cat_id>/', categories, name='Bio'),
+    path('itcube/32', itcube, name='cube')]
