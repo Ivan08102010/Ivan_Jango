@@ -4,7 +4,18 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from django.urls import reverse
 
-Cats = ['https://celes.club/uploads/posts/2022-10/1666808106_47-celes-club-p-krutoi-kot-v-ochkakh-pinterest-49.jpg','https://zaebov.net/wp-content/uploads/2021/01/995/26.jpg','https://www.necoichi.co.jp/files/topics/6701_ext_06_0.jpg']
+cats1 = ['https://celes.club/uploads/posts/2022-10/1666808106_47-celes-club-p-krutoi-kot-v-ochkakh-pinterest-49.jpg',
+         'https://zaebov.net/wp-content/uploads/2021/01/995/26.jpg',
+         'https://www.necoichi.co.jp/files/topics/6701_ext_06_0.jpg',
+         'https://fikiwiki.com/uploads/posts/2022-02/1644991784_25-fikiwiki-com-p-prikolnie-kartinki-pro-kotov-26.jpg',
+         'https://pichold.ru/wp-content/uploads/2018/12/smeshnie-koshki.jpg,',
+         'https://fikiwiki.com/uploads/posts/2022-02/1644991766_9-fikiwiki-com-p-prikolnie-kartinki-pro-kotov-10.jpg',
+         'https://demotivation.ru/wp-content/uploads/2020/07/s1200-10-8-1024x1024.jpg',
+         'https://proprikol.ru/wp-content/uploads/2019/08/kartinki-nyashnye-kotiki-9.jpg',
+         'https://i.yapx.cc/WMaPg.jpg',
+         'https://ferma-biz.ru/wp-content/uploads/2022/08/koty-50.jpg',
+         'https://krot.club/uploads/posts/2022-03/1646806215_8-krot-info-p-kote-prikoli-smeshnie-foto-10.jpg',
+         'https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666142156_11-mykaleidoscope-ru-p-zabavnie-kotiki-vkontakte-12.jpg']
 
 title = ['Главная страница', 'AaAaАа', 'BbBbBb', 'CcCcCc', 'gim1', 'it-cube']
 
@@ -90,5 +101,6 @@ def itcube(request):
 
 
 def Cats(request):
-    data = {'Cats': Cats}
+    data = {'cats1': cats1,
+            }
     return render(request, 'women/Cats.html', data)
