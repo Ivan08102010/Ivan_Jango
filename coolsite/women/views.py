@@ -44,12 +44,6 @@ def gim1(request):
     data = {'title': title}
     return render(request, 'women/gim1.html', data)
 
-
-def gim1(request):
-    return HttpResponse(
-        '<img src= "https://bryansktoday.ru/uploads/common/091b388af452bef4_XL.jpg"</img ><h1> Gimnazia1</h1><img src= "https://www.gimn-1.ru/about/nasha-gordost/13.jpg"</img ><h1>')
-
-
 def categories(request, cat_id):
     if cat_id == 1:
         return HttpResponse(
