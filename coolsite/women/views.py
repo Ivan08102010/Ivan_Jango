@@ -4,6 +4,18 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from django.urls import reverse
 
+menu = [{'title': 'главная страница', 'url_n' : 'home'},
+        {'title': 'Гимназия', 'url_n': 'gim1'},
+        {'title': 'a', 'url_n': 'a'},
+        {'title': 'b', 'url_n': 'c'},
+        {'title': 'c', 'url_n': 'c'},
+        {'title': 'It-Cube', 'url_n': 'cube'},
+        {'title': 'Котики', 'url_n': 'cats'},
+
+        ]
+
+
+
 cats1 = ['https://celes.club/uploads/posts/2022-10/1666808106_47-celes-club-p-krutoi-kot-v-ochkakh-pinterest-49.jpg',
          'https://zaebov.net/wp-content/uploads/2021/01/995/26.jpg',
          'https://www.necoichi.co.jp/files/topics/6701_ext_06_0.jpg',

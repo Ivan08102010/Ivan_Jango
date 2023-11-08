@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends 'base.html' %}
+{%block content%}
+
     <title>Title</title>
-</head>
-<body>
 
 <img src= "https://bryansktoday.ru/uploads/common/091b388af452bef4_XL.jpg"</img >
 
@@ -12,5 +9,5 @@
 
 <a href="{% url 'cats'%}">Котики</a>
 <h1>{{title.4}}</h1>
-</body>
-</html>
+
+{%endblock%}
