@@ -11,7 +11,6 @@ menu = [{'title': 'главная страница', 'url_n' : 'home'},
         {'title': 'c', 'url_n': 'c'},
         {'title': 'It-Cube', 'url_n': 'cube'},
         {'title': 'Котики', 'url_n': 'cats'},
-
         ]
 
 
@@ -29,32 +28,33 @@ cats1 = ['https://celes.club/uploads/posts/2022-10/1666808106_47-celes-club-p-kr
          'https://krot.club/uploads/posts/2022-03/1646806215_8-krot-info-p-kote-prikoli-smeshnie-foto-10.jpg',
          'https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666142156_11-mykaleidoscope-ru-p-zabavnie-kotiki-vkontakte-12.jpg']
 
+
 title = ['Главная страница', 'AaAaАа', 'BbBbBb', 'CcCcCc', 'gim1', 'it-cube']
 
 
 def index(request):
-    data = {'title': title}
-    return render(request, 'women/index.html', data)
+    data = {'title': title, 'menu':menu}
+    return render(request, 'women/index.html',context={'menu':menu})
 
 
 def a(request):
-    data = {'title': title}
+    data = {'title': title, 'menu':menu}
     return render(request, 'women/a.html', data)
 
 
 def b(request):
-    data = {'title': title}
-    return render(request, 'women/b.html', data)
+    data = {'title': title, 'menu':menu}
+    return render(request, 'women/b.html',data)
 
 
 def c(request):
-    data = {'title': title}
-    return render(request, 'women/c.html', data)
+    data = {'title': title, 'menu':menu}
+    return render(request, 'women/c.html',data)
 
 
 def gim1(request):
-    data = {'title': title}
-    return render(request, 'women/gim1.html', data)
+    data = {'title': title, 'menu':menu}
+    return render(request, 'women/gim1.html',data)
 
 def categories(request, cat_id):
     if cat_id == 1:
@@ -102,11 +102,11 @@ def categories(request, cat_id):
 
 
 def itcube(request):
-    data = {'title': title}
-    return render(request, 'women/32.html', data)
+    data = {'title': title, 'menu':menu}
+    return render(request, 'women/32.html',data)
 
 
 def Cats(request):
-    data = {'cats1': cats1,
+    data = {'cats1': cats1, 'menu':menu
             }
-    return render(request, 'women/Cats.html', data)
+    return render(request, 'women/Cats.html',data)
