@@ -20,7 +20,7 @@ class Pupil(models.Model):
     coming_of_age = models.BooleanField(default = True)
 
 class Like_Books(models.Model):
-    name_Book = models.CharField(default= 'Book',max_length=30)
+    name = models.CharField(default= 'Book',max_length=30)
     summary = models.CharField(default='Жили были и стали жить поживать да добра наживать',max_length=200)
     Author = models.CharField(max_length=20)
     date_born_author = models.DateTimeField(max_length=1)
@@ -33,6 +33,14 @@ class Like_Books(models.Model):
 
 # Create your models here.
 
+
+
+
+
 #python manage.py makemigrations
 #python manage.py migrate
 #python manage.py sqlmigrate women 0003
+
+
+
+#python manage.py shell_plus
