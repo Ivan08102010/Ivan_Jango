@@ -43,4 +43,4 @@ class Like_Books(models.Model):
 
 
 
-#python manage.py shell_plus
+
