@@ -1,19 +1,21 @@
+import pupil as pupil
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 # Create your views here.
 from django.urls import reverse
+from women.models import Pupil, Like_Books
 
-menu = [{'title':'главная страница', 'url_n' : 'home'},
+menu = [{'title': 'главная страница', 'url_n': 'home'},
         {'title': 'Гимназия', 'url_n': 'gim1'},
         {'title': 'a', 'url_n': 'a'},
         {'title': 'b', 'url_n': 'b'},
         {'title': 'c', 'url_n': 'c'},
         {'title': 'It-Cube', 'url_n': 'cube'},
         {'title': 'Котики', 'url_n': 'cats'},
+        {'title': 'Люди1', 'url_n': 'pupil1'},
+        {'title': 'books', 'url_n': 'books'},
         ]
-
-
 
 cats1 = ['https://celes.club/uploads/posts/2022-10/1666808106_47-celes-club-p-krutoi-kot-v-ochkakh-pinterest-49.jpg',
          'https://zaebov.net/wp-content/uploads/2021/01/995/26.jpg',
@@ -28,33 +30,33 @@ cats1 = ['https://celes.club/uploads/posts/2022-10/1666808106_47-celes-club-p-kr
          'https://krot.club/uploads/posts/2022-03/1646806215_8-krot-info-p-kote-prikoli-smeshnie-foto-10.jpg',
          'https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666142156_11-mykaleidoscope-ru-p-zabavnie-kotiki-vkontakte-12.jpg']
 
-
 title = ['Главная страница', 'AaAaАа', 'BbBbBb', 'CcCcCc', 'gim1', 'it-cube']
 
 
 def index(request):
-    data = {'title': title, 'menu':menu}
-    return render(request, 'women/index.html',context={'menu':menu})
+    data = {'title': title, 'menu': menu}
+    return render(request, 'women/index.html', context={'menu': menu})
 
 
 def a(request):
-    data = {'title': title, 'menu':menu}
+    data = {'title': title, 'menu': menu}
     return render(request, 'women/a.html', data)
 
 
 def b(request):
-    data = {'title': title, 'menu':menu}
-    return render(request, 'women/b.html',data)
+    data = {'title': title, 'menu': menu}
+    return render(request, 'women/b.html', data)
 
 
 def c(request):
-    data = {'title': title, 'menu':menu}
-    return render(request, 'women/c.html',data)
+    data = {'title': title, 'menu': menu}
+    return render(request, 'women/c.html', data)
 
 
 def gim1(request):
-    data = {'title': title, 'menu':menu}
-    return render(request, 'women/gim1.html',data)
+    data = {'title': title, 'menu': menu}
+    return render(request, 'women/gim1.html', data)
+
 
 def categories(request, cat_id):
     if cat_id == 1:
@@ -102,11 +104,35 @@ def categories(request, cat_id):
 
 
 def itcube(request):
-    data = {'title': title, 'menu':menu}
-    return render(request, 'women/32.html',data)
+    data = {'title': title, 'menu': menu}
+    return render(request, 'women/32.html', data)
 
 
 def Cats(request):
-    data = {'cats1': cats1, 'menu':menu
+    data = {'cats1': cats1, 'menu': menu
             }
-    return render(request, 'women/Cats.html',data)
+    return render(request, 'women/Cats.html', data)
+
+
+def pupil_g(request, p_id):
+    post = get_object_or_404(Pupil, pk=p_id)
+    print(post)
+    return render(request, 'women/pupil_g.html', {'menu': menu, 'post': post})
+
+
+def pupil(request):
+    wom = Pupil.objects.all()
+    data = {'title': title, 'menu': menu, 'wom': wom}
+    return render(request, 'women/pupil1.html', data)
+
+
+def book_g(request, b_id):
+    post1 = get_object_or_404(Like_Books, pk=b_id)
+    return render(request, 'women/book_g.html', {'menu': menu, 'post': post1})
+
+def books(request):
+    book = Like_Books.objects.all()
+    data = {'title': title, 'menu': menu, 'book': book}
+    return render(request, 'women/books.html', data)
+
+

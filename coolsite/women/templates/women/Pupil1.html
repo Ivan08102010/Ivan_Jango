@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{%block content%}
+    <title>Люди</title>
+<ul>
+
+    {% for w in wom %}
+    <li>
+        <a href="{% url 'pupil' w.id %}"> {{w.surname}}</a>
+    </li>
+    {% endfor %}
+</ul>
+{%endblock%}

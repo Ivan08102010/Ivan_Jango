@@ -11,6 +11,11 @@ urlpatterns = [
     path('cats/<int:cat_id>/', categories, name='Bio'),
     path('itcube/32', itcube, name='cube'),
     path('Cats/', Cats, name='cats'),
+    path('pupil/<int:p_id>/', pupil_g, name='pupil'),
+    path('pupil1', pupil, name='pupil1'),
+    path('book/<int:b_id>/', book_g, name='book'),
+    path('books', books, name='books'),
+
 
 
 ]

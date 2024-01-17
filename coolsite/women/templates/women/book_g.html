@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{%block content%}
+    <h1>Книги</h1>
+    <h1>{{post.name}}</h1>
+    <h2>Автор:{{post.Author}}</h2>
+    <h1>Родился:{{post.date_born_author}}</h1>
+    <p>В {{post.date_create}} написал книгу</p>
+
+{%if book.interesting == '1' %}
+    <p>Это интересная книга</p>
+
+{% else %}
+    <p>Это не интересная книга </p>
+{%endif%}
+
+
+    <p>Жанр книги: '{{post.Genre}}' классе</p>
+    <p>Она весит '{{post.size}} кб'</p>
+    <p>Кратко: {{post.summary}}</p>
+{%endblock%}
