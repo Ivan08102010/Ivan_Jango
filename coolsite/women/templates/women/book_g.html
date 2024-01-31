@@ -6,7 +6,7 @@
     <h1>Родился:{{post.date_born_author}}</h1>
     <p>В {{post.date_create}} написал книгу</p>
 
-{%if book.interesting == '1' %}
+{%if book.interesting == "1" %}
     <p>Это интересная книга</p>
 
 {% else %}
@@ -14,7 +14,7 @@
 {%endif%}
 
 
-    <p>Жанр книги: '{{post.Genre}}' классе</p>
-    <p>Она весит '{{post.size}} кб'</p>
+    <p>Жанр книги: {{post.Genre}} классе</p>
+    <p>Она весит {{post.size}} кб</p>
     <p>Кратко: {{post.summary}}</p>
 {%endblock%}

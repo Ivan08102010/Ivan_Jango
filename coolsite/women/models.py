@@ -30,6 +30,7 @@ class Like_Books(models.Model):
     interesting = models.BooleanField(default=True)
     Genre = models.CharField(max_length=12)
     size = models.FloatField(max_length=7)
+    slag = models.SlugField(max_length=255, blank = True, db_index=True, default='')
 
 # Create your models here.
 

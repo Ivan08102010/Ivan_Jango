@@ -125,6 +125,8 @@ def pupil(request):
     data = {'title': title, 'menu': menu, 'wom': wom}
     return render(request, 'women/pupil1.html', data)
 
+def show_post(request, show_slug):
+    post = get_object_or_404(Like_Books, slug=post_slug)
 
 def book_g(request, b_id):
     post1 = get_object_or_404(Like_Books, pk=b_id)
